@@ -41,6 +41,8 @@
 
   <h4>Moji oglasi:</h4>
 
+  <div *ngIf="!ads" class="h3 my-2 text-info">Loading...</div>
+
   <app-ad-item
     *ngFor="let ad of ads"
     [ad]="ad"
