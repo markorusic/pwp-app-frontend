@@ -1,0 +1,40 @@
+<div class="mb-2 user-ad-list-item row">
+
+  <div class="col-12 col-md-6">
+    <!-- Default view -->
+    <div *ngIf="!editMode">
+      <div>
+        <span class="bold">Naslov:</span> {{ ad.title }}
+      </div>
+      <div>
+        <span class="bold">Datum kreiranja:</span> {{ ad.created_at | date }}
+      </div>
+      <div>
+        <span class="bold">Cena:</span>{{ ad.price }}</div>
+      <div class="pr-5">
+        <span class="bold">Opis:</span> {{ ad.description }}
+      </div>
+    </div>
+    
+    <!-- Edit form -->
+    <div *ngIf="editMode">
+      <app-create-ad [ad]="ad" (submited)="emitUpdatingEvent($event)"></app-create-ad>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6">
+    <!-- Actions -->
+    <div class="flex-right">
+      <a *ngIf="!editMode" (click)="toggleEditMode()" class="btn btn-primary white mr-1">
+        <i class="fa fa-pencil"></i>
+      </a>
+      <a *ngIf="editMode" (click)="toggleEditMode()" class="btn btn-danger white">
+        <i class="fa fa-ban"></i> Cancle
+      </a>
+      <a *ngIf="!editMode" (click)="emitDeletingEvent()" class="btn btn-danger white">
+        <i class="fa fa-trash"></i>
+      </a>
+    </div>
+  </div>
+
+</div>
