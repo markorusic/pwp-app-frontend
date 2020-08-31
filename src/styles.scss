@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  overflow-x: hidden;
+}
+.white {
+  color: white !important;
+}
+.black {
+  color: black !important;
+}
+.bold {
+  font-weight: bold;
+}
+.pointer {
+  cursor: pointer;
+}
+.relative {
+  position: relative;
+}
+.abs-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.flex-center,
+.flex-center-col,
+.flex-sp-between,
+.flex-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-sp-between {
+  justify-content: space-between;
+}
+.flex-center-col {
+  flex-direction: column;
+}
+.flex-right {
+  justify-content: flex-end;
+}
+.auth-links {
+  align-items: flex-start;
+  margin-left: 15px;
+}
+.auth-links a {
+  font-size: 14px !important;
+  color: #5d4d4e;
+}
+.user-ad-list-item {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  /* align-items: flex-start; */
+}
