@@ -1,5 +1,4 @@
 <div class="container my-3">
-
   <div *ngIf="successMessage" class="alert alert-success">
     {{ successMessage }}
   </div>
@@ -9,31 +8,38 @@
   </div>
 
   <h3>Moj profil</h3>
-  <hr>
+  <hr />
 
-  <div class="mb-3">
+  <div>
     <div>Ime i prezime: {{ user.name }}</div>
     <div>Email: {{ user.email }}</div>
     <div>Adresa: {{ user.address }}</div>
     <div>Broj telefona: {{ user.phone }}</div>
   </div>
-  
-  <button (click)="toggleCreateNew()" [ngClass]="{
-    'btn-danger': showCreateNew,
-    'btn-primary': !showCreateNew
-  }" class="btn">
-    <i class="fa" [ngClass]="{
-      'fa-plus-square': !showCreateNew,
-      'fa-trash': showCreateNew
-    }"></i>
-    {{ showCreateNew ? 'Odustani': 'Napravi novi oglas' }}
+
+  <button
+    (click)="toggleCreateNew()"
+    [ngClass]="{
+      'btn-danger': showCreateNew,
+      'btn-primary': !showCreateNew
+    }"
+    class="btn my-3"
+  >
+    <i
+      class="fa"
+      [ngClass]="{
+        'fa-plus-square': !showCreateNew,
+        'fa-ban': showCreateNew
+      }"
+    ></i>
+    {{ showCreateNew ? 'Odustani' : 'Napravi novi oglas' }}
   </button>
   <app-create-ad
     *ngIf="showCreateNew"
     (submited)="createAd($event)"
   ></app-create-ad>
 
-  <h4 class="mb-3 mt-5">Moji oglasi:</h4>
+  <h4>Moji oglasi:</h4>
 
   <app-ad-item
     *ngFor="let ad of ads"
@@ -41,5 +47,4 @@
     (update)="updateAd($event)"
     (delete)="deleteAd($event)"
   ></app-ad-item>
-
 </div>
