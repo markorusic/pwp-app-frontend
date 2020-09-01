@@ -1,20 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
-
 import { AuthGuardService as AuthGuard } from './auth/auth-guard.service'
 import { AuthService } from './auth/auth.service'
 import { AuthInterceptor } from './auth/auth.interceptor'
-
 import { AppComponent } from './app.component'
-import { HomeComponent } from './home/home.component'
 import { AddOglasComponent } from './add-oglas/add-oglas.component'
 import { SviOglasiComponent } from './svi-oglasi/svi-oglasi.component'
 import { HeadingComponent } from './heading/heading.component'
 import { FooterComponent } from './footer/footer.component'
 import { AboutusComponent } from './aboutus/aboutus.component'
 import { KontaktComponent } from './kontakt/kontakt.component'
-
 import { AppRoutingModule } from './app-routing/app-routing.module'
 import { HttpModule } from '@angular/http'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
@@ -28,7 +23,6 @@ import { CreateAdComponent } from './profil/create-ad/create-ad.component'
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     AddOglasComponent,
     SviOglasiComponent,
     HeadingComponent,
