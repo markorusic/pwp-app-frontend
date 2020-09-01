@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
 import { tap } from 'rxjs/operators'
 import { User } from '../types'
-import { BASE_API_URL } from '../config'
+import { environment } from 'src/environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -41,7 +41,7 @@ export class AuthService {
 
   public authenticate(email: string, password: string): Observable<any> {
     return this.http
-      .post(`${BASE_API_URL}/auth/login`, { email, password })
+      .post(`${environment.apiBaseUrl}/auth/login`, { email, password })
       .pipe(
         tap(userData => {
           this.setUserData(userData)
@@ -55,6 +55,6 @@ export class AuthService {
   }
 
   public register(userData): Observable<any> {
-    return this.http.post(`${BASE_API_URL}/auth/register`, userData)
+    return this.http.post(`${environment.apiBaseUrl}/auth/register`, userData)
   }
 }

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core'
-import { Ad } from '../../types'
+import { Ad } from '../../../types'
 
 @Component({
   selector: 'app-ad-item',

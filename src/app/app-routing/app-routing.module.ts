@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core'
-import { RouterModule, Routes, CanActivate } from '@angular/router'
-import { AboutusComponent } from '../aboutus/aboutus.component'
-import { SviOglasiComponent } from '../svi-oglasi/svi-oglasi.component'
-import { KontaktComponent } from '../kontakt/kontakt.component'
-import { LoginComponent } from '../login/login.component'
-import { RegisterComponent } from '../register/register.component'
-import { ProfilComponent } from '../profil/profil.component'
+import { RouterModule, Routes } from '@angular/router'
+import { AboutusComponent } from '../components/aboutus/aboutus.component'
+import { SviOglasiComponent } from '../components/svi-oglasi/svi-oglasi.component'
+import { KontaktComponent } from '../components/kontakt/kontakt.component'
+import { LoginComponent } from '../components/login/login.component'
+import { RegisterComponent } from '../components/register/register.component'
+import { ProfilComponent } from '../components/profil/profil.component'
 
 import { AuthGuardService as AuthGuard } from '../auth/auth-guard.service'
 

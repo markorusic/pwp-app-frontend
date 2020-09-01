@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
-import { AuthService } from '../auth/auth.service'
-import { AdService } from '../ad.service'
-import { Ad } from '../types'
+import { AuthService } from '../../auth/auth.service'
+import { AdService } from '../../services/ad.service'
+import { Ad } from '../../types'
 
 @Component({
   selector: 'app-svi-oglasi',

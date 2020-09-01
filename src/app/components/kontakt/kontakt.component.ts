@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
-import { AuthService } from '../auth/auth.service'
 import { HttpClient } from '@angular/common/http'
-import { BASE_API_URL } from '../config'
+import { AuthService } from '../../auth/auth.service'
+import { environment } from 'src/environments/environment'
 
 @Component({
   selector: 'app-kontakt',
@@ -26,7 +26,7 @@ export class KontaktComponent implements OnInit {
 
   onSubmit() {
     this.http
-      .post(`${BASE_API_URL}/contact`, {
+      .post(`${environment.apiBaseUrl}/contact`, {
         email: this.email,
         name: this.name,
         message: this.message
