@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Ad } from '../../Ad';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'
+import { Ad } from '../../types'
 
 @Component({
   selector: 'app-create-ad',
@@ -7,21 +7,20 @@ import { Ad } from '../../Ad';
   styleUrls: ['./create-ad.component.css']
 })
 export class CreateAdComponent implements OnInit {
+  @Input() ad: Ad
+  @Output() submited = new EventEmitter()
 
-  @Input() ad: Ad;
-  @Output() submited = new EventEmitter();
+  public title: string
+  public description: string
+  public price: number
 
-  public title: string;
-  public description: string;
-  public price: number;
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     if (this.ad) {
-      this.title = this.ad.title;
-      this.description = this.ad.description;
-      this.price = this.ad.price;
+      this.title = this.ad.title
+      this.description = this.ad.description
+      this.price = this.ad.price
     }
   }
 
@@ -30,7 +29,6 @@ export class CreateAdComponent implements OnInit {
       title: this.title,
       description: this.description,
       price: this.price
-    });
+    })
   }
-
 }

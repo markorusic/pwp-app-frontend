@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import { AuthService } from '../auth/auth.service'
 
 @Component({
@@ -7,14 +7,11 @@ import { AuthService } from '../auth/auth.service'
   styleUrls: ['./heading.component.css']
 })
 export class HeadingComponent implements OnInit {
-
-  public isAuthenticated: boolean;
+  public isAuthenticated: boolean
 
   constructor(private auth: AuthService) {
-    this.isAuthenticated = this.auth.isAuthenticated();
+    this.isAuthenticated = this.auth.isAuthenticated()
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

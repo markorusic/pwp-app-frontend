@@ -1,25 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { CreateAdComponent } from './create-ad.component';
+import { CreateAdComponent } from './create-ad.component'
 
 describe('CreateAdComponent', () => {
-  let component: CreateAdComponent;
-  let fixture: ComponentFixture<CreateAdComponent>;
+  let component: CreateAdComponent
+  let fixture: ComponentFixture<CreateAdComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateAdComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [CreateAdComponent]
+    }).compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateAdComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(CreateAdComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
